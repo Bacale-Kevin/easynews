@@ -1,0 +1,7 @@
+{
+  "name": "easy-news-front-end",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

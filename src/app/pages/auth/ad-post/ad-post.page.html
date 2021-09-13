@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="ad-signup"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Poster</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+
+      <!-- Image -->
+      <ion-list-header class="select">
+        <ion-label class='label'>
+          Image
+        </ion-label>
+      </ion-list-header>
+      <ion-item lines="none" class='imageupload-container'>
+        <input type="file" class='file-input' (change)="detectImage($event)" [(ngModel)]="imageUrl"
+          accept="image/png, image/jpg" required formControlName="image" #imageUpload>
+        <ion-button class='image-btn' color="primary" fill='outline' (click)="imageUpload.click()">
+          <span class='uploadimage-span'>{{image || "Inserer une image"}}</span>
+          <ion-icon lazy="true" slot="end" name="add-outline"></ion-icon>
+        </ion-button>
+      </ion-item>
+
+
+
+      <!-- Video -->
+      <ion-list-header class="select">
+        <ion-label class='label'>
+          Video
+        </ion-label>
+      </ion-list-header>
+      <ion-item lines="none" class='imageupload-container'>
+        <input type="file" class='file-input' (change)="detectVideo($event)" [(ngModel)]="videoUrl" accept="video/*"
+          required formControlName="video" #videoUpload>
+        <ion-button class='image-btn' color="primary" fill='outline' (click)="videoUpload.click()">
+          <span class='uploadimage-span'>{{video || "Inserer une video"}}</span>
+          <ion-icon lazy="true" slot="end" name="add-outline"></ion-icon>
+        </ion-button>
+      </ion-item>
+
+
+      <!-- Description -->
+      <ion-item>
+        <ion-label position="floating" >Text</ion-label>
+        <ion-textarea  placeholder="Entrez le text de publicite" formControlName="adText"></ion-textarea>
+      </ion-item>
+
+
+      <!-- link -->
+      <ion-item class='link'>
+        <ion-label position="floating">Lien</ion-label>
+        <ion-input type="url" placeholder="Entrez url de redirection de votre site web" formControlName="link"></ion-input>
+      </ion-item>
+
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit"  expand="block" class="btn-button">Continuer</ion-button>
+          <!-- <ion-button type="submit" [disabled]="postForm.invalid || fileIsUploading" expand="block" color="success">Enregister !</ion-button> -->
+        </ion-col>
+      </ion-row>
+
+    </form>
+  </div>
+</ion-content>

@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="setting"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Partenaire</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+      <div class="label">
+          <P>
+              Devenez un partenaire news et mettez votre blog en avant. En vous inscrivant comme partenaire, vous aurez la visibilité sur notre plate-forme.
+          </P>
+          <p>Remplissez le formulaire ci-dessous pour être un partenaire news.</p>
+      </div>
+      <div class="form">
+          <form [formGroup]="partnerForm" (ngSubmit)="onSubmit()">
+              <ion-list>
+                  <!-- last and first name -->
+                  <ion-item>
+                      <ion-label position="floating">Nom et Prénom</ion-label>
+                      <ion-input type="text" required formControlName="name"></ion-input>
+                  </ion-item>
+
+
+
+                  <!-- email -->
+                  <ion-item>
+                      <ion-label position="floating">Adresse email</ion-label>
+                      <ion-input type="email" required formControlName="email"></ion-input>
+                  </ion-item>
+
+                  <!-- phone -->
+                  <ion-item>
+                      <ion-label position="floating">Téléphone</ion-label>
+                      <ion-input type="number" required formControlName="phone"></ion-input>
+                  </ion-item>
+
+                  <!-- entity -->
+                  <ion-item>
+                      <ion-label position="floating">Nom de l'entité</ion-label>
+                      <ion-input type="text" required formControlName="entity"></ion-input>
+                  </ion-item>
+
+                  <!-- description -->
+                  <ion-item>
+                      <ion-label position="floating">Description</ion-label>
+                      <ion-textarea required formControlName="description"></ion-textarea>
+                      </ion-item>
+              </ion-list>
+
+              <ion-row class="row">
+                  <ion-col>
+                  <ion-button type="submit" expand="block" [disabled]="partnerForm.invalid">Enregister</ion-button>
+                  </ion-col>
+              </ion-row>
+          </form>
+      </div>
+  </div>
+</ion-content>

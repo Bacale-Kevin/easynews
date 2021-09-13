@@ -1,0 +1,57 @@
+.container {
+  margin: 1rem 1rem 0 1rem;
+
+
+}
+
+#status-container {
+    width: 100%;
+}
+
+.status {
+    display: flex;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    div:first-child {
+      margin-right: 4rem;
+    }
+    div:last-child {
+      margin-left: 3rem;
+    }
+    div label {
+      display: block;
+    }
+    input {
+      display: inline-block;
+      margin-left: 2rem;
+    }
+    .pme {
+      margin-left: 1rem;
+    }
+  }
+
+  .select {
+    margin: 1.3rem 0 1rem 0;
+  }
+
+  .row {
+    margin-top: 1.5rem;
+  }
+
+.title {
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+#information-title {
+  margin-bottom: 25px;
+}
+
+.button {
+    --padding-bottom: 25px;
+    --padding-top: 25px;
+}
+
+.btn-container {
+    margin-top: 1.2rem;
+}

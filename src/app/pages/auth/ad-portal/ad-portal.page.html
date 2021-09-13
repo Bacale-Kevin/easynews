@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="setting"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Portail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+      <div class="profil">
+          <div class="avatar">
+              <img src="./assets/avatar.png" alt="">
+          </div>
+          <div class="address">
+              <p class="name">NANIABO MARTIN FILS</p>
+              <P class="email">keenndjc@gmail.com</P>
+          </div>
+      </div>
+      <div class="portal">
+          <div>
+              <a [routerLink]="['/ad-signup']">Poster une annonce</a>
+          </div>
+          <div>
+              <a [routerLink]="['/ad-dashboard']">Consulter vos annonces</a>
+          </div>
+          <div>
+              <a [routerLink]="[]">Paramètres de paiement</a>
+          </div>
+      </div>
+  </div>
+</ion-content>

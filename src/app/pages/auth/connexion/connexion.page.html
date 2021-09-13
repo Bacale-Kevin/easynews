@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="without-pub"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Connexion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+      <div class="brand">
+          <img src="./assets/logo.png" alt="">
+      </div>
+      <h1 class="slogand">News Made 2 Easy</h1>
+
+      <div class="row mt-3">
+          <form [formGroup]="signinForm" (ngSubmit)="onSubmit()">
+              <ion-list>
+                  <!-- email -->
+                  <ion-item>
+                      <ion-label position="floating">Adresse email</ion-label>
+                      <ion-input type="email" [(ngModel)]="email" required formControlName="email"></ion-input>
+                  </ion-item>
+
+                  <!-- password -->
+                  <ion-item>
+                      <ion-label position="floating">Mot de passe</ion-label>
+                      <ion-input type="password" [(ngModel)]="password" required formControlName="password"></ion-input>
+                  </ion-item>
+              </ion-list>
+
+              <ion-row class="row">
+                  <ion-col>
+                  <ion-button type="submit" expand="block" [disabled]="signinForm.invalid">Connexion</ion-button>
+                  </ion-col>
+              </ion-row>
+          </form>
+      </div>
+
+      <div class="connect-with">
+          <div class="google">
+              <div (click)="onSignInWithGoogle()">
+                  <!-- <a [routerLink]="['/paying-without-pub']"> -->
+                  <a [routerLink]="[]">
+                      <div>
+                          <div class="img"><img src="./assets/google.png" alt=""></div>
+                          <div class="text"><span>Se connecter avec Google</span></div>
+                      </div>
+                  </a>
+              </div>
+          </div>
+          <div class="facebook">
+              <div (click)="onSignInWithFacebook()">
+                  <a [routerLink]="[]">
+                      <div>
+                          <div class="img"><img src="./assets/facebook.png" alt=""></div>
+                          <div class="text"><span>Se connecter avec Facebook</span></div>
+                      </div>
+                  </a>
+              </div>
+          </div>
+      </div>
+
+      <div class="text-danger mt-5">{{ errorMessage }}</div>
+  </div>
+</ion-content>

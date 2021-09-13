@@ -1,0 +1,66 @@
+.container {
+  margin: 1rem 1rem 1rem 1rem;
+  color: #444;
+
+  .label {
+      text-align: center;
+      font-size: 1rem;
+  }
+
+  .post, .amount {
+      border: 1px solid gray;
+      border-radius: 5px;
+      padding: .3rem;
+      font-size: 1rem;
+  }
+
+  .btn {
+      height: 2.5rem;
+      width: 50%;
+      background: #3a86ff;
+      margin: auto;
+      text-align: center;
+      border: 1px solid gray;
+      border-radius: 5px;
+      a {
+          text-decoration: none;
+          color: #fff;
+          display: inline-block;
+          margin-top: .5rem;
+      }
+  }
+
+  .post {
+      margin: -.5rem 0 .5rem 0;
+      .description {
+          .text {
+              display: flex;
+              div:last-child {
+                  width: 65%;
+                  margin-left: .5rem;
+              }
+          }
+      }
+      .btn {
+          margin-top: .7rem;
+      }
+  }
+
+  .amount {
+      p {
+          span {
+              display: block;
+              width: 70%;
+              margin-left: 20%;
+          }
+      }
+      p + p {
+          margin-top: -.7rem;
+          color: #e63946;
+      }
+      .btn {
+          margin-top: -.5rem;
+      }
+  }
+
+}

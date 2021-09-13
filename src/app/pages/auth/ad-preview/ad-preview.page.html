@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="ad-audience"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Preview</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+      <div class="label">
+          <p>Prévisualisez votre annonce et choisissez votre budget.</p>
+      </div>
+      <div class="post">
+          <div class="img">
+              <img src="./assets/preview.jpg" alt="">
+          </div>
+          <div class="description">
+              <div><b>Titre : </b> Thé frais biologique</div>
+               <div class="text">
+                  <div>
+                      <b>description : </b>
+                  </div>
+                  <div>
+                      Aliments frais biologique constitués principalement du thé naturel.
+                  </div>
+               </div>
+              <b>Lien : </b> https://www.naturaltea.com
+          </div>
+          <div class="btn">
+              <a [routerLink]="[]">Modifier</a>
+          </div>
+      </div>
+      <div class="amount">
+          <ion-list>
+              <ion-item>
+                  <ion-label position="floating">Entrez un budget</ion-label>
+                  <ion-input type="number" placeholder="1OOO F"></ion-input>
+              </ion-item>
+          </ion-list>
+          <p>
+              <b>Nos tarifs: </b> <span>Frais d'enregistrement: <b>1000 F</b> <br>
+              Coût par click : <b>25 F</b> <br>Coût par vue : <b>5 F</b></span>
+          </p>
+          <p>Tous les Coûts sont affichés en FCFA</p>
+          <div class="btn">
+              <a [routerLink]="['/ad-payment']">Enregistrer et payer</a>
+          </div>
+      </div>
+  </div>
+</ion-content>

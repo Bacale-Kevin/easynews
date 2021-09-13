@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="setting"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Paiement</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="payment">
+          <h1 class="amount">50 000 Fcfa/an</h1>
+          <div class="mode">
+              <div class="row">
+                  <div class="img visa">
+                      <a [routerLink]="['/partner-confirm']">
+                          <img src="./assets/visa.png" alt="">
+                      </a>
+                  </div>
+                  <div class="img mastercard">
+                      <a [routerLink]="['/partner-confirm']">
+                          <img src="./assets/mastercard.png" alt="">
+                      </a>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="img paypal">
+                      <a [routerLink]="['/partner-confirm']">
+                          <img src="./assets/paypal.png" alt="">
+                      </a>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="img orange">
+                      <a [routerLink]="['/partner-confirm']">
+                          <img src="./assets/orange-money.png" alt="">
+                      </a>
+                  </div>
+                  <div class="img mtn">
+                      <a [routerLink]="['/partner']">
+                          <img src="./assets/mtn-money.png" alt="">
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+</ion-content>

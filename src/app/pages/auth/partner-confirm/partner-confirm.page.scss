@@ -1,0 +1,22 @@
+.container {
+  margin: 2rem;
+
+  .label {
+      margin-bottom: 6rem;
+      p {
+          font-size: 1.3rem;
+          line-height: 1.8rem;
+          color: #444;
+          font-weight: 500;
+      }
+      p:last-child {
+          text-align: center;
+          font-weight: 600;
+          color: #555;
+      }
+  }
+
+  .btn {
+      text-align: center;
+  }
+}

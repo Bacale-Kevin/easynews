@@ -1,0 +1,94 @@
+ion-title {
+  font-size: 1.3rem;
+  color: rgb(122, 116, 116);
+}
+
+.container {
+  h2 {
+      font-weight: 900;
+      color: #555;
+      margin-bottom: 0px;
+  }
+}
+
+.categories, .suggestion {
+  margin: .6rem;
+}
+
+.underline {
+  margin-top: 0px;
+  width: 50px;
+  border: 3px solid gray;
+  border-radius: .3rem;
+  background-color: gray;
+}
+
+/* CATEGORIES */
+.categories {
+  margin-bottom: 3rem;
+  &-title {
+      margin-bottom: 1rem;
+  }
+}
+
+.search-bar {
+  margin: 1.5rem 0 2.5rem 0;
+}
+
+.categories-content {
+  display: flex;
+  justify-content: space-between;
+  overflow: scroll;
+
+  div {
+      margin-right: .4rem;
+  }
+}
+
+.category {
+  --border-radius: .3rem;
+}
+
+// Opter pour un compte payant
+.paying-account {
+  text-align: center;
+  margin-bottom: 3rem;
+  a {
+      text-decoration: none;
+  }
+}
+
+/* SUGGESTION DE SUJETS */
+.suggestion-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.suggestion-title {
+  margin-bottom: 1rem;
+}
+
+.sug {
+  border: 1px solid gray;
+  border-radius: .3rem;
+  width: 33%;
+  margin-top: .7rem;
+  margin-left: 0.07rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &-img {
+      margin: .7rem;
+  }
+  &-label {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-top: 0px;
+      margin-bottom: .5rem;
+      color: #555;
+  }
+
+  a {
+      text-decoration: none;
+  }
+}

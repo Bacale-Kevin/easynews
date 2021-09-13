@@ -1,0 +1,43 @@
+.container {
+  margin: 2rem 2rem 0rem 2rem;
+
+  .brand {
+      width: 30vw;
+      margin: auto;
+  }
+
+  .slogand {
+      margin-top: 3rem;
+      text-align: center;
+      font-weight: 900;
+      color: #555;
+  }
+
+  .connect-with {
+      margin-top: 2rem;
+      .google, .facebook {
+          border: 1px solid gray;
+          height: 4rem;
+          text-align: center;
+          border-radius: 5px;
+          a {
+              text-decoration: none;
+          }
+          a div {
+              display: flex;
+              justify-content: space-around;
+              .img {
+                  width: 3rem;
+                  margin-top: .5rem;
+              }
+              .text {
+                  font-size: 1.1rem;
+                  margin-top: 1.4rem;
+              }
+          }
+      }
+      .google {
+          margin-bottom: 2rem;
+      }
+  }
+}

@@ -1,0 +1,55 @@
+$color-text: #444;
+
+.aim {
+    color: $color-text;
+    text-align: center;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    font-size: 1.5rem;
+    width: 75vw;
+    margin-left: 12vw;
+}
+
+ion-button {
+    margin-top: 5vh;
+}
+
+/* CountrySearch private styles */
+
+.input-cs {
+    padding: .5rem;
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+    display: block;
+  }
+
+.input-cs:focus {
+    outline: #336699 auto 1px;
+  }
+
+  li {
+    list-style-type: none;
+  }
+  .search-result li a {
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    display: inline-block;
+    width: 100%;
+    max-width: 600px;
+    padding: .5rem;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+  }
+
+  .search-result li a:hover {
+    background-color: #435A60;
+    color: white;
+  }
+
+  ul.search-result {
+    margin-top: 0;
+    padding-left: 0;
+  }

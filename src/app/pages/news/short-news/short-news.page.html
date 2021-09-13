@@ -1,0 +1,97 @@
+<ion-header  [ngClass]="{ 'header-hidden': !viewMenue}">
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="main-home"></ion-back-button>
+      </ion-buttons>
+    <ion-title>News</ion-title>
+    <ion-buttons slot="end">
+        <ion-button routerLink="/form-short-news">
+          <ion-icon slot="icon-only" class="refresh" color="primary" name="refresh-outline"></ion-icon>
+        </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content (click)="toggleMenu()">
+  <div class="my-content">
+    <ion-slides [options]="slideOpts" (ionSlideDrag)="viewOff()">
+      <ion-slide *ngFor="let news of tabNews" class="news">
+        <div class="news-top">
+          <div class="news-bg-img">
+            <img class="news-blur-img" src="{{ news.image }}" alt="">
+            <img class="news-img" src="{{ news.image }}" alt="">
+          </div>
+              <span class="news-title" >
+                {{ news.title }}
+              </span>
+              <span class="news-short_text">
+                {{ news.content }}
+              </span>
+        </div>
+
+          <div class="news-more">
+            <div class="link">
+              <img class="mybgimg" src="{{ news.image }}" alt="">
+              <a [href]="news.link" target="_blank" >commentaire sur la news test</a>
+            </div>
+          </div>
+      </ion-slide>
+    </ion-slides>
+
+    <!-- <sw-card-wrapper #cardWrapper>
+      <div class="card" *ngFor="let news of tabNews, let index = index"
+           swSwipeable
+           [width]="350"
+           [height]="400"
+           [orientation]="'x'"
+           (swiped)="console.log('salut')"
+           >
+           <img class="news-img" src="{{ news.image }}" alt="">
+
+           <div class="news-top">
+              <div class="news-bg-img">
+              </div>
+                <span class="news-title" >
+                  {{ news.title }}
+                </span>
+          </div>
+
+      </div>
+  </sw-card-wrapper> -->
+
+    <!-- <div *ngFor="let news of tabNews" class="news">
+      <div class="news-top">
+        <div class="news-bg-img">
+          <img class="news-blur-img" src="{{ news.image }}" alt="">
+          <img class="news-img" src="{{ news.image }}" alt="">
+        </div>
+            <span class="news-title" >
+              {{ news.title }}
+            </span>
+            <span class="news-short_text">
+              {{ news.content }}
+            </span>
+      </div>
+
+        <div class="news-more">
+          <div class="link">
+            <a [href]="news.link" target="_blank" >commentaire sur la news</a>
+          </div>
+        </div>
+    </div> -->
+  </div>
+
+</ion-content>
+<ion-footer [ngClass]="{ 'footer-hidden': !viewMenue}">
+  <ion-toolbar class="news-more">
+
+    <div class="opinion">
+      <div class="share">
+        <img src="./assets/share.png" alt="">
+      </div>
+      <div class="bookmark">
+        <img src="./assets/bookmark.png" alt="">
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-footer>

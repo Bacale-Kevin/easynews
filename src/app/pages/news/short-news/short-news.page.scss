@@ -1,0 +1,186 @@
+// @import "~ng-swipe-card/style/styles";
+
+*{
+  font-family: 'font_news', 'Lucida Sans', sans-serif;
+}
+.refresh {
+  font-size: 2rem;
+}
+
+ion-header{
+  position: fixed;
+  top: 0;
+  transition: all 0.2s;
+
+  &.header-hidden{
+    transform: translateY(-100%);
+  }
+}
+
+ion-footer{
+  position: fixed;
+  bottom: 0;
+  transition: all 0.2s;
+
+  &.footer-hidden{
+    transform: translateY(100%);
+  }
+}
+
+ion-content{
+  --background:black;
+}
+
+.my-content{
+  background-color: white;
+  height: 100vh;
+  border-radius: 9px 9px 9px 9px;
+  overflow: scroll;
+}
+
+.news {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  border-radius: 9px 9px 9px 9px;
+  &-top{
+    display: flex;
+    flex-direction: column;
+  }
+    &-bg-img {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 35vh;
+      overflow: hidden;
+      position: relative;
+      border-radius: 9px 9px 0px 0px;
+
+    }
+    &-blur-img{
+      max-width: 100%;
+      height: auto;
+      transform: scale(4,4);
+      filter: blur(5px);
+    }
+    &-img {
+      // display: none;
+      position: absolute;
+      max-width: 100%;
+      height: auto;
+      max-height: 35vh;
+      // filter: none;
+    }
+    &-content {
+        max-height: 50vh;
+        color: rgb(0, 0, 0);
+        margin-left:.8rem;
+        margin-right: .8rem;
+        font-weight: 200px;
+        text-transform: lowercase;
+
+      }
+    &-title {
+        font-weight: 600;
+        text-transform: lowercase;
+        font-size: 1em;
+        margin: 0.5em 0.5em 0em 0.5em;
+    }
+    &-short_text {
+      font-size: 1em;
+      line-height: 1.3rem;
+        margin: 0.25em 0.5em 0.5em 0.5em;
+        strong {
+          font-weight: 545;
+      }
+    }
+
+
+    &-more {
+        height: 10vh;
+        width: 100%;
+        border-radius: 0px 0px 9px 9px;
+
+        display: flex;
+        flex-direction: row;
+
+
+
+        .link {
+          width: 100%;
+            height: parent;
+            border-radius: 0px 0px 9px 9px;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+
+
+            .mybgimg{
+              max-width: 100%;
+              height: auto;
+              border: 1px solid black;
+              transform: scale(4,4);
+              filter: blur(5px);
+            }
+
+            a {
+                position: absolute;
+                top: 0;
+                display: block;
+                text-decoration: none;
+                height: 100%;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.425);
+                font-size: 1em;
+                display: block;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0.5em;
+            }
+        }
+        .opinion {
+            width: 100%;
+            height: parent;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-around;
+
+            .share, .bookmark {
+              max-width: 25px;
+              height: auto;
+            }
+        }
+    }
+}
+
+.card{
+  border: 1px solid black;
+  position: absolute;
+  background-color: white;
+  top:0;
+  overflow: hidden;
+}
+
+sw-card-wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+ion-slides {
+  height: 100%;
+  background-color: black;
+}
+
+ion-slide {
+  text-align: left;
+  background-color: white;
+
+}

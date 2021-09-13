@@ -1,0 +1,129 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="ad-signup"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Inscription</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <form [formGroup]="adForm" (ngSubmit)="onSubmit()">
+
+      <ion-grid>
+        <ion-row>
+          <ion-col size='12' id='information-title'>
+            <ion-list-header>
+              <h1 id='title'>Informations personnelles</h1>
+            </ion-list-header>
+          </ion-col>
+          <ion-col size="6">
+            <ion-item class="item" color="light">
+              <ion-label position="floating" class='label'>Nom</ion-label>
+              <ion-input type='text' placeholder="Entrer votre nom" required formControlName="name"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col size="6">
+            <ion-item class="item" color="light">
+              <ion-label position="floating" class='label'>Prenom</ion-label>
+              <ion-input type='text' placeholder="Entrer votre nom" formControlName="surname"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12">
+            <ion-item class="item" color="light">
+              <ion-label position="floating" class='label'>Email</ion-label>
+              <ion-input type='text' placeholder="email@example.com" required formControlName="email"></ion-input>
+            </ion-item>
+          </ion-col>
+
+          <ion-col size=12 class='ion-no-padding'>
+            <ion-list-header class='title'>
+              <h1 id='title'>Informations de localisation</h1>
+            </ion-list-header>
+          </ion-col>
+          <ion-col size='6'>
+            <ion-label position='stack' class='label'>Pays</ion-label>
+            <ion-item color="light">
+              <ion-select placeholder='Entrer le pay' interface="popover" value="" formControlName="country">
+                <ion-select-option value="peperoni">Peperoni</ion-select-option>
+                <ion-select-option value="hawaii">Hawaii</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size='6'>
+            <ion-label class='label'>Ville</ion-label>
+            <ion-item color="light">
+              <ion-select placeholder='Entrer la ville' interface="popover" value="" formControlName="town">
+                <ion-select-option value="peperoni">Peperoni</ion-select-option>
+                <ion-select-option value="hawaii">Hawaii</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12">
+            <ion-item class="item" color="light">
+              <ion-label position="floating" class='label'>Code</ion-label>
+              <ion-input type='number' placeholder="Entrer le code du pay" required formControlName="countryCode"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col size='12'>
+            <ion-list-header class='title'>
+              <h1 id='title'>Votre Statut</h1>
+            </ion-list-header>
+          </ion-col>
+
+
+          <ion-item id='radio-container' color="light" id='status-container'>
+            <div class="status">
+              <div>
+                <input id="1" class='radio' type="radio" name="status" value="Particulier" formControlName="status">
+                <label for="1">Particulier</label>
+              </div>
+              <div>
+                <input id="2" type="radio" value="pme" name="status" class="PME" formControlName="status">
+                <label for="2">P.M.E</label>
+              </div>
+              <div>
+                <input id="3" type="radio" value="Entreprise" name="status" formControlName="status">
+                <label for="3">Entreprise</label>
+              </div>
+            </div>
+          </ion-item>
+
+          <ion-col size='12'>
+            <ion-list-header class='title'>
+              <h1 id='title'>Secteur d'activite</h1>
+            </ion-list-header>
+          </ion-col>
+
+          <ion-col size='12'>
+            <ion-label position='stack' class='label'>Activite</ion-label>
+            <ion-item color="light">
+              <ion-select placeholder="Entrer votre secteur d'activite" interface="popover" value=""
+                formControlName="activity">
+                <ion-select-option value="journalist">Journalisme</ion-select-option>
+                <ion-select-option value="press">Press</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+
+
+
+          <ion-col size='12'>
+            <ion-item class="item" color="light">
+              <ion-label position="floating" id='employer-title' class='label'>Nombre d'employer</ion-label>
+              <ion-input type='number' placeholder="Entrer le nombre d'employer" required formControlName="nbEmploye">
+              </ion-input>
+            </ion-item>
+          </ion-col>
+
+          <ion-col size='12' class='btn-container'>
+            <ion-button type="submit" expand="full" size='default' class="btn button">Enregistrer</ion-button>
+          </ion-col>
+
+        </ion-row>
+      </ion-grid>
+      <!-- </ion-list> -->
+    </form>
+  </div>
+</ion-content>

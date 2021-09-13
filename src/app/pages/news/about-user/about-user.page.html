@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Infos personnelles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="aim">
+    <p>Quelques infos à propos de vous</p>
+  </div>
+
+  <form [formGroup]="anUserForm" (ngSubmit)="onSubmitForm()">
+    <ion-list>
+      <!-- Country -->
+      <ion-item>
+        <ion-label position="floating">Pays</ion-label>
+        <ion-input [(ngModel)]="country" class="input-cs" #searchAnUser (input)="search(searchAnUser.value)" type="text" required formControlName="country"></ion-input>
+
+        <ul class="search-result">
+          <li *ngFor="let country of (countries$ | async) | keyvalue" (click)="selectCountry(country.value)">
+              {{ country.value | titlecase }}
+          </li>
+        </ul>
+      </ion-item>
+
+      <!-- Gender -->
+      <ion-radio-group value="female" required formControlName="gender">
+        <ion-list-header>
+          <ion-label>Sexe</ion-label>
+        </ion-list-header>
+
+        <ion-item>
+          <ion-label>Femme</ion-label>
+          <ion-radio slot="start" value="female">
+
+          </ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Homme</ion-label>
+          <ion-radio slot="start" value="male"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+
+      <!-- Age -->
+      <ion-item>
+        <ion-label position="floating">Age</ion-label>
+        <ion-input type="number" required formControlName="age"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" expand="block" [disabled]="anUserForm.invalid">Terminé!</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

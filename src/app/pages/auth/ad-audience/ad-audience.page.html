@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="ad-post"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Audience</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <div class="text">
+      <p>
+        Selectionnez votre audience pour choisir à qui votre annonce sera affichée
+      </p>
+      <P>Notre outil de selection d'audience vous permet cibler une niche précise.</P>
+      <form [formGroup]="audienceForm" (ngSubmit)="onSubmit()">
+        <!-- <ion-list>
+          <ion-list-header>
+            <ion-label>
+              Pays
+            </ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-label>Pays actuel</ion-label>
+            <ion-select value="cm" cancelText="Fermer" placeholder="pays" formControlName="country">
+              <ion-select-option value="cm">Cameroun</ion-select-option>
+              <ion-select-option value="us">United Satate</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list> -->
+
+        <ion-row>
+          <ion-col size='12'>
+            <ion-label position='stack' class='label'>Audiance</ion-label>
+            <ion-item color="light">
+              <ion-select value="cm" cancelText="Fermer" placeholder="Choisiser votre audiance local ou international "
+                formControlName="country">
+                <ion-select-option value="cm">Local</ion-select-option>
+                <ion-select-option value="us">International</ion-select-option>
+              </ion-select>
+              <!-- <ion-select placeholder='Choisiser votre audiance local ou international ' interface="popover" value=""
+                formControlName="country">
+                <ion-select-option value="peperoni">Peperoni</ion-select-option>
+                <ion-select-option value="hawaii">Hawaii</ion-select-option>
+              </ion-select> -->
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-button type="submit"  expand="block">Continuer</ion-button>
+          </ion-col>
+        </ion-row>
+      </form>
+    </div>
+  </div>
+</ion-content>

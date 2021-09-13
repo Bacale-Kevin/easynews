@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="ad-portal"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Dashboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+      <div class="spent">
+          <p>0,00 FCFA dépensé</p>
+      </div>
+
+      <div class="result">
+          <div class="views">
+              <div>0</div><div>Vues</div>
+          </div>
+          <div class="clicked">
+              <div>0</div><div>Clics</div>
+          </div>
+          <div class="rate">
+              <div>0 %</div><div>Taux de click</div>
+          </div>
+          <div class="bookmark">
+              <div>O</div><div>Favoris</div>
+          </div>
+      </div>
+
+      <div class="info">
+          <p>
+              Les statistiques affichent les données de toutes les annonces des 30 derniers jours.
+          </p>
+      </div>
+
+      <div class="btns">
+          <div class="active">
+              <div>
+                  <a [routerLink]="[]">Actives</a>
+              </div>
+          </div>
+          <div class="posted">
+              <div>
+                  <a [routerLink]="['/ad-analytic']">Postées</a>
+              </div>
+          </div>
+          <div class="reject">
+              <div>
+                  <a [routerLink]="['/ad-analytic']">Rejetées</a>
+              </div>
+          </div>
+          <div class="complet">
+              <div>
+                  <a [routerLink]="['/ad-analytic']">Complètes</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</ion-content>

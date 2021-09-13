@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/setting']">
+          <ion-icon slot="icon-only" name="settings-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Accueil</ion-title>
+    <ion-buttons slot="end">
+        <ion-button>
+            <ion-icon slot="icon-only" name="notifications-outline"></ion-icon>
+        </ion-button>
+        <ion-button [routerLink]="['/short-news']" routerDirection="forward" >
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <div class="search-bar">
+      <app-news-search></app-news-search>
+    </div>
+
+    <div class="categories">
+      <div class="categories-title">
+        <h2>CATEGORIES</h2>
+        <div class="underline"></div>
+      </div>
+
+      <div class="categories-content">
+        <div>
+          <ion-button class="category" color="medium">
+            Mon flux
+          </ion-button>
+        </div>
+        <div>
+          <ion-button class="category" color="medium">
+            All news
+          </ion-button>
+        </div>
+        <div>
+          <ion-button class="category" color="medium">
+            Favoris
+          </ion-button>
+        </div>
+        <div>
+          <ion-button class="category" color="medium">
+            Tendance
+          </ion-button>
+        </div>
+        <div>
+          <ion-button class="category" color="medium">
+            Non lus
+          </ion-button>
+        </div>
+      </div>
+    </div>
+
+    <div class="paying-account">
+      <h3>Opter pour un compte payant</h3>
+      <p><a [routerLink]="['/without-pub']">Cliquez pour en savoir plus</a></p>
+    </div>
+
+    <div class="suggestion">
+      <div class="suggestion-title">
+        <h2>SUGGESTION DE SUJETS</h2>
+        <div class="underline"></div>
+      </div>
+
+      <div class="suggestion-content">
+        <div class="sug" *ngFor="let category of tabCategory">
+          <a [routerLink]="['/short-news']" routerLinkActive="router-link-active" >
+            <div class="sug-img">
+              <img src="{{category.logo}}" alt="">
+            </div>
+            <p class="sug-label">{{category.name}}</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

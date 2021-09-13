@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="main-home"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Paramètres</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+      <div class="login">
+          <p>Connectez vous pour donner votre avis et partager l'info.</p>
+          <p>Utiliser un compte</p>
+          <div class="brands">
+              <div class="img">
+                  <img src="./assets/google.png" alt="">
+              </div>
+              <div class="img">
+                  <img src="./assets/facebook.png" alt="">
+              </div>
+          </div>
+      </div>
+      <div class="manager">
+          <a [routerLink]="['/ad-portal']">Gestion des annonces</a>
+          <a [routerLink]="['/partner-form']">Devenir un partenaire news</a>
+      </div>
+      <div class="terms">
+          <div class="language">
+              <ion-list>
+                  <ion-item>
+                      <ion-label>aA Langue</ion-label>
+                      <ion-select cancelText="Fermer" class="select" value="french" placeholder="Select One">
+                          <ion-select-option value="french">Français</ion-select-option>
+                          <ion-select-option value="english">Anglais</ion-select-option>
+                      </ion-select>
+                  </ion-item>
+              </ion-list>
+          </div>
+          <ion-list>
+              <ion-item>
+                      <div class="notification">
+                              <div class="label">
+                                  <p>Notification</p>
+                              </div>
+                              <div class="input">
+                                  <p><input type="checkbox" name="" id=""></p>
+                              </div>
+                          </div>
+              </ion-item>
+          </ion-list>
+          <div>
+              <a [routerLink]="[]">Partager cette application</a>
+              <a [routerLink]="[]">Evaluer cette application</a>
+              <a [routerLink]="[]">Termes et conditions</a>
+              <a [routerLink]="[]">Politique et confidentialité</a>
+          </div>
+      </div>
+      <div class="logout-delete">
+          <div class="logout">
+              <ion-button>Déconnexion</ion-button>
+          </div>
+          <div class="delete">
+              <ion-button color="danger">Supprimer le compte</ion-button>
+          </div>
+      </div>
+  </div>
+</ion-content>

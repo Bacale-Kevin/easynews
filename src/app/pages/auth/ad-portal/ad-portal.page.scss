@@ -1,0 +1,50 @@
+.container {
+  margin: 2rem;
+
+  .profil {
+      display: flex;
+      justify-content: space-around;
+      .avatar {
+          width: 28vw;
+          border-radius: 50%;
+      }
+      .address {
+          margin-left: 2rem;
+          color: #555;
+          .name {
+              font-size: 1.2rem;
+              font-weight: 900;
+              margin-top: 0;
+          }
+          .email {
+              margin-top: -.5rem;
+          }
+      }
+  }
+
+  .portal {
+      display: flex;
+      flex-direction: column;
+      margin-top: 6rem;
+      div {
+          height: 3rem;
+          border: 1px solid gray;
+          border-radius: 5px;
+          background: #3a86ff;
+          a {
+              display: block;
+              margin-top: .7rem;
+              font-size: 1.3rem;
+              text-decoration: none;
+              text-align: center;
+              color: #fff;
+          }
+      }
+      div:first-child {
+          margin-bottom: 2rem;
+      }
+      div:last-child {
+          margin-top: 2rem;
+      }
+  }
+}
